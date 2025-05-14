@@ -1,8 +1,30 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752FD8Ghe4.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Oswald;
     color: #e3f2f7;
   }
   
@@ -32,10 +54,10 @@ nav a {
 
 nav a:hover {
     transition: 0.5s; 
-    text-shadow: white 0px 0px 30px;
+    text-shadow: white 0px 0px 5px;
 }
 
-.btnContact {
+.btnContact, .btnContactResponsive {
     color: white;
     background: linear-gradient(to bottom right, #96cbe2, #864fcf);
     border-radius: 10px;
@@ -54,14 +76,28 @@ header {
     padding: 100px;
 }
 
-.btnContact {
-  position: relative;
-  overflow: hidden; /* cache le débordement du halo */
+.btnContactResponsive {
+  visibility: hidden;
+  display: none;
 }
 
-.btnContact {
-  position: relative;
-  overflow: hidden; /* empêche le halo de dépasser */
-  z-index: 0; /* pour que ::before soit en-dessous du contenu */
+@media only screen and (max-width: 600px) {
+  .nomSite, .btnContact {
+    display: none;
+    visibility: hidden;
+  }
+  .btnContactResponsive {
+    display: block;
+    visibility: visible;
+  }
+  nav {
+    padding: 0;
+  }
 }
 
+@media only screen and (max-width: 440px) {
+  nav a {
+    font-weight: 400;
+    margin: 10px;
+  }
+}
