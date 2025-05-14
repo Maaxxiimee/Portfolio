@@ -1,36 +1,22 @@
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Oswald';
+/* .rubik> {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752FD8Ghe4.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 200 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-
-
+} */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Oswald;
+    font-family: "Rubik", sans-serif;
     color: #e3f2f7;
   }
   
   body {
     min-height: 100vh;
     background: #020709;
+    background: linear-gradient(to bottom right, #121516, #020709);
     overflow: hidden;
   }
   
@@ -44,17 +30,12 @@ nav {
     border-bottom: rgba(78, 78, 78, 0.548) 0.5px solid;
 }
 
-nav a {
+nav a, header a {
     margin: 20px;
     font-weight: 500;
     font-size: large;
     text-decoration: none;
     transition: 0.5s; 
-}
-
-nav a:hover {
-    transition: 0.5s; 
-    text-shadow: white 0px 0px 5px;
 }
 
 .btnContact, .btnContactResponsive {
@@ -81,8 +62,8 @@ header {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  .nomSite, .btnContact {
+@media only screen and (max-width: 630px) {
+  .nomSite, nav .btnContact {
     display: none;
     visibility: hidden;
   }
@@ -93,6 +74,10 @@ header {
   nav {
     padding: 0;
   }
+  nav a {
+    font-weight: 400;
+    margin: 10px;
+  }
 }
 
 @media only screen and (max-width: 440px) {
@@ -100,4 +85,102 @@ header {
     font-weight: 400;
     margin: 10px;
   }
+}
+
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+}
+
+header h1 {
+  font-size: 300%;
+}
+
+header h5 {
+  font-weight: 100;
+  margin: 50px;
+}
+
+.btnVisite {
+  transition: 0.5s;
+  color: white;
+  background: linear-gradient(to bottom right, #ffffff00, #cecece00);
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid white;    
+}
+
+.btnVisite:hover {
+  transition: 0.5s;
+  background: linear-gradient(to bottom right, #ffffff, #cecece);
+  color: black;
+}
+
+.gradient-text {
+  font-weight: bold;
+  background: linear-gradient(120deg, #96cbe2 40%, #864fcf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fade-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation: typing 2.5s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 6% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.hoverNavElement:hover {
+  border-bottom: .15em solid white;
+  white-space: nowrap;
+  animation: typing 2.5s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.arrow-down {
+  position: fixed;
+  top: 850px;
+  right: 97.5%;
+  width: 24px;
+  height: 24px;
+  border-left: 4px solid white;
+  border-bottom: 4px solid white;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-45deg); }
+  50% { transform: translateY(10px) rotate(-45deg); }
 }
