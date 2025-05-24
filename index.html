@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="ress/logo.png">
-        <meta name="description" content="Enchanté ! Je suis Maxime et bienvenue sur mon Portfolio ! Ici vous retrouverez différentes informations sur moi concernant mes capacités, mes compétences, mes projets,
-                mes passions mais aussi qui je suis et comment me contacter. Bonne visite !">
         <title>Acceuil - Maxime Bourbon</title>
         <style> @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');</style>
     </head>
@@ -15,28 +13,69 @@
     <body class="fade-slide"> 
         
         <nav>
-            <a class="nomSite gradient-text typewriter" href="">&lt;/Maxime&gt;</a>
+            <a class="nomSite gradient-text typewriter" href="./index.html">&lt;/Maxime&gt;</a>
             <div class="rightNav">
                 <a class="hoverNavElement" href="">A propos de moi</a>
                 <a class="hoverNavElement" href="">Mes projets</a>
-                <a class="btnContact" href="">Me contacter</a>
+                <a href="" class="hoverNavElement">CV Numérique</a>
+                <a class="btnContact" href="./contact.html">Me contacter</a>
                 
             </div>
             <a class="btnContactResponsive" href="">Me contacter</a>
         </nav>
 
-        <header>
+        <header class="headerIndex">
             <h1 class="gradient-text">Enchanté ! Je suis Maxime.</h1>
             <h5>Bienvenue sur mon Portfolio ! Ici vous retrouverez différentes informations sur moi concernant mes capacités, mes compétences, mes projets,
                 mes passions mais aussi qui je suis et comment me contacter. Bonne visite !
             </h5>
             <div>
-                <a class="btnVisite" href="">Commencer la visite</a>
-                <a class="btnContact" href="">Me contacter</a>
+                <a class="btnVisite" href="#presentation">Commencer la visite</a>
+                <a class="btnContact" href="./contact.html">Me contacter</a>
             </div>
         </header>
 
-        <div class="arrow-down"></div>
+        <main>
+
+           <section class="secPresentation" id="presentation">  
+            <h1 class="gradient-text">Présentation</h1>
+            <div class="presentation">
+                <div>
+                    <img src="./ress/moi.png" alt="Photo de moi" class="photo-profil">
+                </div>
+                <div>
+                    <div class="card">
+                        <h2 class="card-title gradient-text">👤 Qui je suis</h2>
+                        <p>
+                        Je m'appelle <strong>Maxime Bourbon</strong>, j'ai 19 ans et je suis étudiant à l'<strong>IUT de Lannion</strong> en BUT Informatique.
+                        Passionné par l'informatique depuis mon plus jeune âge, j’ai commencé par développer des sites web, créer des scripts et programmer des chatbots 🤖.
+                        </p>
+                        <p>
+                        En dehors du code, je m’intéresse à l’<strong>astronomie 🌌</strong> et à la <strong>musique 🎧</strong>, notamment via la production musicale.
+                        </p>
+                        <p>
+                        À l'avenir, je souhaite poursuivre mes études en <strong>école d’ingénieurs</strong> dans le domaine de la <strong>cybersécurité 🔒</strong> ou de l’<strong>intelligence artificielle 🧠</strong>.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-title gradient-text">🎓 Mon parcours d'étude</h2>
+                        <ul class="parcours-list">
+                        <li>📘 <strong>Baccalauréat STI2D</strong> - Spécialité SIN - Lycée Jeanne d’Arc Pontivy (56)</li>
+                        <li>💻 <strong>BUT Informatique</strong> - Développement web, logiciel, systèmes, bases de données - IUT de Lannion (22)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <!-- <div class="warning">Site toujours en cours de dévelopement, si vous constatez un bug merci de m'en prévenir par e-mail en remplissant le formulaire de contact</div> -->
 
     </body>
 
