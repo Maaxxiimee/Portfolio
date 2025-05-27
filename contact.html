@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Contact - Bourbon Maxime</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <a class="moi" href="./index.html">Moi</a>
-            <a class="projects" href="./projects.html">Projets</a>
-            <a class="contact" href="./contact.html">Contact</a>
-        </nav>
-    </header>
-</body>
 
-    <style> 
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap'); 
-        nav a.contact {
-            color: white;
-            -webkit-text-stroke: 1px #000000;
-        }
-    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" type="image/x-icon" href="ress/logo.png">
+        <title>Contact - Maxime Bourbon</title>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');</style>
+    </head>
+
+    <body class="fade-slide"> 
+
+        <nav>
+            <a class="nomSite gradient-text typewriter" href="./index.html">&lt;/Maxime&gt;</a>
+            <div class="rightNav">
+                <a class="hoverNavElement" href="">A propos de moi</a>
+                <a class="hoverNavElement" href="">Mes projets</a>
+                <a href="" class="hoverNavElement">CV Numérique</a>
+                <a class="btnContact" href="./contact.html">Me contacter</a>
+                
+            </div>
+            <a class="btnContactResponsive" href="">Me contacter</a>
+        </nav>
+
+        <header class="headerContact">
+            <div class="formulaireContact">
+                <div class="formulaireTexte">
+                    <h1 style="text-align: center;">Formulaire de contact</h1>
+                    <h3 style="font-weight: 200;">Veuillez ici remplir les informations requises quant à la requête de votre contact.</h3>
+                    <h5 style="font-weight: 200;"><i>Les champs obligatoires sont marqués d'un *.</i></h5>
+                </div>
+                
+                <form>
+                    <!-- <h4>Nom & Prénom *</h4> -->
+                    <input placeholder="Nom & Prénom *" type="text" required>
+                    <!-- <h4>Email *</h4> -->
+                    <input type="email" placeholder="Adresse e-mail *" required>
+                    <!-- <h4>Numéro de téléphone</h4> -->
+                    <input placeholder="Numéro de téléphone" type="tel">
+
+                    <!-- <h4>Objet</h4> -->
+                    <select name="contactSelect" id="contactSelect" required>
+                        <option value="" disabled selected>-- Sélectionnez un objet -- *</option>
+                        <option value="info_pro">Demande d'informations professionnelles</option>
+                        <option value="support">Signaler un problème technique</option>
+                        <option value="question_generale">Poser une question générale</option>
+                        <option value="feedback">Donner un avis ou une suggestion</option>
+                        <option value="autre">Autre</option>
+                    </select>
+
+                    <!-- <h4>Contenu *</h4> -->
+                    <textarea name="message" placeholder="Contenu du message *" required></textarea>
+                    <input class="envoyerFormulaire" type="submit" value="Envoyer"/>
+                </form>
+
+            </div>
+
+            <div class="infoContact">
+                <h1>a</h1>
+            </div>
+        </header>
+
+    </body>
 
 </html>
