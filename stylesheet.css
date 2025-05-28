@@ -279,7 +279,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   align-items: flex-start;
 }
 
-.secPresentation h1, .secProjet h1 {
+.secPresentation h1, .secProjet h1, .secCompetence h1 {
   padding-bottom: 50px;
   font-size: 40px;
 }
@@ -421,4 +421,17 @@ input:active, input:focus, textarea:active, textarea:focus {
   flex-wrap: wrap; /* autorise le passage à la ligne */
   align-items: stretch;
   width: 100%; /* prend toute la largeur de son parent */
+}
+
+.secCompetence {
+  border: rgba(78, 78, 78, 0.548) 0.5px solid;
+  padding: 2rem;
+  min-height: 750px;
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
