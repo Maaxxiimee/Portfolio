@@ -1,16 +1,10 @@
-/* .rubik> {
-  font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Rubik", sans-serif;
     color: #e3f2f7;
+    user-select: none;
   }
   
   body {
@@ -130,6 +124,7 @@ nav a, .headerIndex a {
   border-radius: 10px;
   padding: 15px;
   border: 1px solid white;    
+  text-decoration: none;
 }
 
 .btnVisite:hover {
@@ -160,7 +155,6 @@ nav a, .headerIndex a {
 
 .typewriter {
   overflow: hidden;
-  border-right: .15em solid white;
   white-space: nowrap;
   letter-spacing: .15em;
   animation: typing 2.5s steps(60, end), blink .75s step-end infinite;
@@ -175,7 +169,7 @@ nav a, .headerIndex a {
   50% { border-color: transparent }
 }
 
-.hoverNavElement:hover {
+.hoverNavElement:hover, .gaucheFooter a:hover {
   border-bottom: .15em solid white;
   white-space: nowrap;
   animation: typing 2.5s steps(30, end), blink .75s step-end infinite;
@@ -225,6 +219,11 @@ nav a, .headerIndex a {
   border-radius: 10px;
   padding: 30px;
   width: 35%; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
 }
 
 input, textarea, select {
@@ -279,7 +278,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   align-items: flex-start;
 }
 
-.secPresentation h1, .secProjet h1, .secCompetence h1 {
+.secPresentation h1, .secProjet h1, .secCapacites h1, .secFin h1 {
   padding-bottom: 50px;
   font-size: 40px;
 }
@@ -310,7 +309,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   transition: 0.5s;
 }
 
-.card:hover {
+.card:hover, .divUtilise:hover {
   transition: 0.5s;
   transform: translateY(-5px);
   box-shadow: 0 4px 12px #96cbe298;
@@ -423,7 +422,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   width: 100%; /* prend toute la largeur de son parent */
 }
 
-.secCompetence {
+.secCapacites {
   border: rgba(78, 78, 78, 0.548) 0.5px solid;
   padding: 2rem;
   min-height: 750px;
@@ -434,4 +433,185 @@ input:active, input:focus, textarea:active, textarea:focus {
   align-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+
+.ensImg {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+}
+
+.ensImg img {
+  background-color: none;
+  margin: 20px;
+  width: 75px;
+  height: 75px;
+  border: none;
+}
+
+
+
+
+
+
+
+
+.droite {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gauche {
+  padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popUp {
+  padding: 2rem;
+  border-radius: 15px;
+  border: rgba(78, 78, 78, 0.548) 0.5px solid;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.popUp .imgIllustration {
+  border: 5px solid #1e2225;
+  border-radius: 10px;
+  width: 600px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.ensImgPopUp img {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: none;
+  margin-top: 10px;
+}
+
+.divUtilise {
+  width: 600px;
+  background-color: #1b1f22;  
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px #96cbe249;
+  transition: transform 0.3s ease;
+  transition: 0.5s;
+}
+
+.ensImgPopUp {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.redirectionGithub {
+  border-radius: 10px;
+  border: 2px solid rgb(0, 255, 0);
+  color: rgb(0, 255, 0);
+  padding: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.redirectionGithub:hover {
+  color: #1b1f22;
+  background-color: rgb(0, 255, 0);
+  transition: 0.5s;
+}
+
+.texte h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.texte h2 {
+  margin: 10px;
+}
+
+.texte p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.secFin h1 {
+  padding-bottom: 0;
+  font-size: 400%;
+}
+
+.secFin {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    padding-bottom: 200px;
+}
+
+.secFin p {
+  margin: 50px;
+}
+
+.secFin a {
+  text-decoration: none;
+}
+
+.secFin div a {
+  margin: 50px;
+}
+
+footer {
+    bottom: 0;
+    padding: 50px;
+    border-top: rgba(78, 78, 78, 0.548) 0.5px solid;
+    background: linear-gradient(to right, #121516, #020709);
+}
+
+.ensCat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.gaucheFooter a {
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.droiteFooter a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.mentionsLegales h2 {
+  margin-top: 30px;
+}
+
+.svgIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.infoContact h2 {
+  padding-top: 10px;
+  padding: 10px;
 }
