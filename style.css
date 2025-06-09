@@ -394,6 +394,8 @@ input:active, input:focus, textarea:active, textarea:focus {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  object-fit: cover; /* recadre l'image sans déformer */
+  object-position: center; /* centre l'image dans le cadre */
 }
 
 .cardProjet img, .cardProjet h2, .cardProjet p, .cardProjet button {
@@ -488,6 +490,8 @@ input:active, input:focus, textarea:active, textarea:focus {
   border-radius: 10px;
   width: 600px;
   height: 250px;
+  object-fit: cover;
+  object-position: center; 
   margin-bottom: 20px;
 }
 
@@ -614,4 +618,20 @@ footer {
 .infoContact h2 {
   padding-top: 10px;
   padding: 10px;
+}
+
+.redirectionGithubImpossible {
+  border-radius: 10px;
+  border: 2px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  padding: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.redirectionGithubImpossible:hover {
+  color: #1b1f22;
+  background-color: rgb(255, 0, 0);
+  transition: 0.5s;
 }
