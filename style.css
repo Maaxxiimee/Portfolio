@@ -62,7 +62,7 @@ nav a, .headerIndex a {
   display: none;
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 790px) {
   .nomSite, nav .btnContact {
     display: none;
     visibility: hidden;
@@ -76,7 +76,33 @@ nav a, .headerIndex a {
   }
   nav a {
     font-weight: 400;
-    margin: 10px;
+    margin: 13px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nomSite, nav .btnContact {
+    display: block;
+    visibility: visible;
+  }
+  .btnContactResponsive {
+    display: block;
+    visibility: visible;
+  }
+  .btnContact {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  nav {
+    padding: 0;
+  }
+  nav a {
+    display: none;
+    visibility: hidden;
+  }
+  .headerIndex {
+    font-size: large !important;
+    padding: 50px !important;
   }
 }
 
@@ -87,14 +113,39 @@ nav a, .headerIndex a {
   }
 }
 
-@media only screen and (max-width: 720px) { 
-  nav, .headerIndex, body {
+@media only screen and (max-width: 1075px) { 
+  .presentation {
+    flex-direction: column !important;
+  }
+  .presentation .card {
+    margin-left: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 775px) { 
+  .presentation .photo-profil {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 650px) { 
+  .cardProjet {
+      height: 320px !important;
+      width: 300px !important;
+  }
+  .cardProjet img {
+      width: 200px !important;
+      height: 100px !important;
+  }
+  .cardProjet p {
     display: none;
     visibility: hidden;
   }
-  .exceptionPage {
-    display: block;
-    visibility: visible;
+  .ensImg img {
+    margin: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+    overflow: hidden;
   }
 }
 
@@ -377,6 +428,7 @@ input:active, input:focus, textarea:active, textarea:focus {
   box-shadow: 0 4px 12px #96cbe249;
   transition: transform 0.3s ease;
   opacity: 0.80;
+  margin: 20px !important;
 }
 
 .cardProjet:hover {
